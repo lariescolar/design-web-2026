@@ -2,74 +2,121 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{seu nome aqui} - UX e Dev Front-end</title>
-    <!-- CSS compilado do SCSS | colocar o link correto, pois este vai dar erro, viu-->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Usando a fonte de icones aqui-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header IFRN - Tailwind CSS</title>
+    
+    <!-- Fonte Inter para padronização de todos os textos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@latest/src/css/phosphor.css" />
 </head>
 
-<body>
+<body class="bg-gray-100 min-h-screen font-sans antialiased">
 
-    <header role="banner">
-        <nav role="navigation" aria-label="Navegação principal">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#contato">Contato</a></li>
+    <!-- Cabeçalho com cor institucional IFRN -->
+    <header class="bg-[#00703C] text-white">
+        
+        <!-- 1. Fila Superior: Logo, Slogan, Redes Sociais, Ações e Busca -->
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between gap-6">
+            
+            <!-- Logo e Slogan -->
+            <div class="flex items-center gap-6">
+                <a href="/" title="Instituto Federal do Rio Grande do Norte" class="inline-block transition opacity-95 hover:opacity-100">
+                    <!-- Insira o caminho da logo do IFRN aqui -->
+                    <img src="assets/img/ifrn_logo_branco.svg" alt="Logo IFRN" class="h-10 md:h-12 w-auto object-contain" />
+                </a>
+                
+                <p class="hidden lg:block text-xs md:text-sm font-normal leading-tight max-w-[230px] opacity-90">
+                    Educação, Ciência, Cultura e Tecnologia em todo o Rio Grande do Norte
+                </p>
+            </div>
+
+            <!-- Botão Mobile + Bloco de Ações Desktop -->
+            <div class="flex items-center gap-3">
+                
+                <!-- MENU HAMBÚRGUER (mobile) -->
+                <button id="menuToggle" aria-label="Menu" class="md:hidden text-white p-2 text-3xl focus:outline-none hover:text-green-200 transition cursor-pointer">
+                    <i class="ph ph-list"></i>
+                </button>
+
+                <!-- Ícones de Redes Sociais (com imagens dentro dos círculos) -->
+                <div class="hidden md:flex items-center gap-2">
+                    
+                    <!-- Instagram -->
+                    <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white/20 transition shrink-0">
+                        <img src="assets/img/instagram-logo.svg" alt="Instagram" class="w-4 h-4 object-contain" />
+                    </a>
+
+                    <!-- X (Twitter) -->
+                    <a href="#" aria-label="X" class="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white/20 transition shrink-0">
+                        <img src="assets/img/x-logo.svg" alt="X" class="w-4 h-4 object-contain" />
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn" class="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white/20 transition shrink-0">
+                        <img src="assets/img/linkedin-logo.svg" alt="LinkedIn" class="w-4 h-4 object-contain" />
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white/20 transition shrink-0">
+                        <img src="assets/img/youtube-logo.svg" alt="YouTube" class="w-4 h-4 object-contain" />
+                    </a>
+
+                    <!-- Spotify -->
+                    <a href="#" aria-label="Spotify" class="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white/20 transition shrink-0">
+                        <img src="assets/img/spotify-logo.svg" alt="Spotify" class="w-4 h-4 object-contain" />
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="#" aria-label="TikTok" class="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white/20 transition shrink-0">
+                        <img src="assets/img/tiktok-logo.svg" alt="TikTok" class="w-4 h-4 object-contain" />
+                    </a>
+
+                    <!-- Divisor Vertical -->
+                    <div class="w-px h-5 bg-white/40 mx-1"></div>
+
+                    <!-- Alto Contraste -->
+                    <button id="altocontraste" type="button" aria-label="Alto contraste" class="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white/20 transition cursor-pointer bg-transparent shrink-0">
+                        <img src="assets/img/circle-half.svg" alt="Alto Contraste" class="w-4 h-4 object-contain" />
+                    </button>
+
+                    <!-- Modo Escuro/Claro -->
+                    <button type="button" aria-label="Modo escuro" class="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white/20 transition cursor-pointer bg-transparent shrink-0">
+                        <img src="assets/img/moon.svg" alt="Modo Escuro" class="w-4 h-4 object-contain" />
+                    </button>
+                </div>
+
+                <!-- Campo de Busca -->
+                <form method="get" action="/search/" class="hidden md:flex items-center bg-white rounded-full px-3.5 py-1.5 focus-within:ring-2 focus-within:ring-green-300 transition ml-2">
+                    <i class="ph ph-magnifying-glass text-gray-500 mr-2 text-base"></i>
+                    <input type="search" name="query" placeholder="Busca" aria-label="Busca" class="bg-transparent border-none focus:outline-none text-sm text-gray-700 w-32 lg:w-44 placeholder-gray-500 font-normal" />
+                </form>
+            </div>
+        </div>
+
+        <!-- 2. Linha Divisória Horizontal -->
+        <div class="max-w-7xl mx-auto border-t border-white/20"></div>
+
+        <!-- 3. Fila Inferior: Navegação Principal -->
+        <nav aria-label="Navegação principal" class="hidden md:block max-w-7xl mx-auto px-4 py-3">
+            <ul class="flex flex-wrap items-center gap-7 text-sm font-medium tracking-wide">
+                <li><a href="#" class="no-underline hover:text-green-200 transition">Processos seletivos</a></li>
+                <li><a href="#" class="no-underline hover:text-green-200 transition">Cursos</a></li>
+                <li><a href="#" class="no-underline hover:text-green-200 transition">Campi</a></li>
+                <li><a href="#" class="no-underline hover:text-green-200 transition">Institucional</a></li>
+                <li><a href="#" class="no-underline hover:text-green-200 transition">Acesso à Informação</a></li>
+                <li><a href="#" class="no-underline hover:text-green-200 transition">Eventos</a></li>
+                <li><a href="#" class="no-underline hover:text-green-200 transition">Serviços</a></li>
             </ul>
         </nav>
+        
     </header>
 
-    <main role="main">
-        <section id="sobre" aria-labelledby="titulo-card">
-            <div class="card">
-
-                <!-- Avatar (placeholder) -->
-                <div class="card__avatar">
-                    <img src="https://via.placeholder.com/120x120/2c3e50/ffffff?text=Bruno"
-                        alt="Avatar de Bruno Nakamura, UX e Dev Front-end">
-                </div>
-
-                <!-- Informações -->
-                <div class="card__content">
-                    <h1 id="titulo-card">Bruno Nakamura</h1>
-                    <p class="card__subtitle">UX e Dev Front-end</p>
-
-                    <p class="card__description">
-                        Sou um híbrido raro: Design Systems + Engenharia de Produto.
-                        Entrego de ponta a ponta – da descoberta à produção – com métricas
-                        de negócio na cabeceira e DX/UX no detalhe.<br>
-                        Tradução simultânea entre PMs, Design, Front, Back e Data.
-                        Sem teatrinho: shippo, meço, repito.
-                    </p>
-
-                    <!-- Botão com ícone -->
-                    <a href="#" class="card__button" aria-label="Vamos trabalhar juntos">
-                        Vamos trabalhar juntos <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                </div>
-
-                <!-- Tecnologias (mockup de ícones) -->
-                <div class="card__tech" id="tecnologias">
-                    <h2 class="card__tech-title">Tecnologias que domino</h2>
-                    <ul class="card__tech-list">
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> ClickUp</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Dropbox</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> PAYCHEX</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> elastic</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> stripe</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer role="contentinfo">
-        <p>&copy; 2026 Bruno Nakamura - Exemplo didático para alunos de webdesign</p>
-    </footer>
 </body>
 
 </html>

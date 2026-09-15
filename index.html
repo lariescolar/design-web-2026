@@ -4,117 +4,259 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atividade 10 – Seção de Eventos</title>
+    <title>Atividade 10 – Seção de Eventos (Cards Quadrados)</title>
+    <!-- Tailwind v4 -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Phosphor Icons -->
     <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@latest/src/css/phosphor.css" />
+    <!-- Fonte Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
 
-<body>
+<body class="bg-[#EEF5EF]">
 
     <!-- ===========  Eventos  ================= -->
-    <section>
-        <div>
-            <!-- Cabeçalho da seção -->
-            <div>
-                <h2>Eventos</h2>
-                <a href="/eventos/">
+    <!-- Container Geral da Seção -->
+    <section class="py-16 px-6 md:px-12 w-full">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Cabeçalho (Título + Botão) -->
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                <h2 class="text-5xl md:text-[52px] font-black text-[#023D21] tracking-tight">Eventos</h2>
+                <a href="/eventos/" class="inline-flex items-center justify-center text-sm font-medium text-[#023D21] border border-[#023D21] rounded-full px-5 py-2 hover:bg-[#023D21] hover:text-white transition-all self-start md:mt-3">
                     Todos os eventos
-                    <span aria-hidden="true"></span>
+                    <!-- Seta de chevron exata -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                 </a>
-                <div>
-                    <p>Conheça todos os eventos - atividades, festivais, congressos, palestras e outros - que englobam
-                        os <i>campi</i> do IFRN em diferentes escalas de alcance social.</p>
-                </div>
             </div>
 
-            <!-- Grade de cards de eventos -->
-            <div>
+            <!-- Descrição (Quebras de linha exatas) -->
+            <p class="text-[#1F2937] mb-12 text-[16px] md:text-[17px] leading-relaxed font-medium">
+                Conheça todos os eventos - atividades, festivais, congressos, palestras e<br class="hidden md:block"> 
+                outros - que englobam os <em class="italic">campi</em> do IFRN em diferentes escalas de<br class="hidden md:block">
+                alcance social.
+            </p>
 
-                <a href="/eventos/9486/">
-                    <span>Em breve</span>
-                    <span title="Campus"><span aria-hidden="true"></span> Pau dos Ferros</span>
-                    <h3>Vivências em Arte</h3>
+            <!-- Grade de Cards (4 colunas) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- ================= LINHA 1: EM BREVE ================= -->
+
+                <!-- Card 1: Vivências em Arte (Proporção 1:1 e cantos arredondados corretos) -->
+                <a href="#" class="bg-white rounded-2xl border-[1.5px] border-[#B6DBBE] p-6 lg:p-7 flex flex-col justify-between aspect-square hover:bg-gray-50 transition-all">
                     <div>
-                        <span>07</span>
-                        <span>dez</span>
-                        <span>2026</span>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#008443]">
+                                <i class="ph ph-triangle text-[16px]" aria-hidden="true"></i>
+                                Em breve
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-[12px] font-medium text-[#5A5A5A] border border-[#D1D5DB] rounded-full px-3 py-1">
+                                <i class="ph ph-buildings text-[14px]" aria-hidden="true"></i>
+                                Pau dos Ferros
+                            </span>
+                        </div>
+                        <h3 class="text-[17px] lg:text-[18px] font-medium text-[#111827] leading-snug">
+                            Vivências em Arte
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <span class="text-[56px] lg:text-[64px] font-bold text-[#008443] leading-none tracking-tighter">07</span>
+                        <div class="flex flex-col text-[15px] lg:text-[16px] font-bold text-[#008443] leading-tight uppercase">
+                            <span>DEZ</span>
+                            <span>2026</span>
+                        </div>
                     </div>
                 </a>
 
-                <a href="/eventos/9595/">
-                    <span>Em breve</span>
-                    <span title="Campus"><span aria-hidden="true"></span> Caicó</span>
-                    <h3>III Feira Seridó Ciência</h3>
+                <!-- Card 2: III Feira Seridó Ciência -->
+                <a href="#" class="bg-white rounded-2xl border-[1.5px] border-[#B6DBBE] p-6 lg:p-7 flex flex-col justify-between aspect-square hover:bg-gray-50 transition-all">
                     <div>
-                        <span>25</span>
-                        <span>nov</span>
-                        <span>2026</span>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#008443]">
+                                <i class="ph ph-triangle text-[16px]" aria-hidden="true"></i>
+                                Em breve
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-[12px] font-medium text-[#5A5A5A] border border-[#D1D5DB] rounded-full px-3 py-1">
+                                <i class="ph ph-buildings text-[14px]" aria-hidden="true"></i>
+                                Caicó
+                            </span>
+                        </div>
+                        <h3 class="text-[17px] lg:text-[18px] font-medium text-[#111827] leading-snug">
+                            III Feira Seridó Ciência
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <span class="text-[56px] lg:text-[64px] font-bold text-[#008443] leading-none tracking-tighter">25</span>
+                        <div class="flex flex-col text-[15px] lg:text-[16px] font-bold text-[#008443] leading-tight uppercase">
+                            <span>NOV</span>
+                            <span>2026</span>
+                        </div>
                     </div>
                 </a>
 
-                <a href="/eventos/9783/">
-                    <span>Em breve</span>
-                    <span title="Campus"><span aria-hidden="true"></span> João Câmara</span>
-                    <h3>CPOP 2026 - Competição de Pontes de Palito de Picolé do IFRN João Câmara</h3>
+                <!-- Card 3: CPOP 2026 -->
+                <a href="#" class="bg-white rounded-2xl border-[1.5px] border-[#B6DBBE] p-6 lg:p-7 flex flex-col justify-between aspect-square hover:bg-gray-50 transition-all">
                     <div>
-                        <span>04</span>
-                        <span>nov</span>
-                        <span>2026</span>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#008443]">
+                                <i class="ph ph-triangle text-[16px]" aria-hidden="true"></i>
+                                Em breve
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-[12px] font-medium text-[#5A5A5A] border border-[#D1D5DB] rounded-full px-3 py-1">
+                                <i class="ph ph-buildings text-[14px]" aria-hidden="true"></i>
+                                João Câmara
+                            </span>
+                        </div>
+                        <h3 class="text-[17px] lg:text-[18px] font-medium text-[#111827] leading-snug">
+                            CPOP 2026 - Competição de Pontes de Palito de Picolé do IFRN João Câmara
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <span class="text-[56px] lg:text-[64px] font-bold text-[#008443] leading-none tracking-tighter">04</span>
+                        <div class="flex flex-col text-[15px] lg:text-[16px] font-bold text-[#008443] leading-tight uppercase">
+                            <span>NOV</span>
+                            <span>2026</span>
+                        </div>
                     </div>
                 </a>
 
-                <a href="/eventos/9333/">
-                    <span>Em breve</span>
-                    <span title="Campus"><span aria-hidden="true"></span> Reitoria</span>
-                    <h3>III Encontro Anual da Comissão Própria de Avaliação</h3>
+                <!-- Card 4: III Encontro Anual CPA (Fundo Transparente) -->
+                <a href="#" class="bg-transparent rounded-2xl border-[1.5px] border-[#B6DBBE] p-6 lg:p-7 flex flex-col justify-between aspect-square hover:bg-white transition-all">
                     <div>
-                        <span>04</span>
-                        <span>nov</span>
-                        <span>2026</span>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#008443]">
+                                <i class="ph ph-triangle text-[16px]" aria-hidden="true"></i>
+                                Em breve
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-[12px] font-medium text-[#5A5A5A] border border-[#D1D5DB] rounded-full px-3 py-1 bg-transparent">
+                                <i class="ph ph-buildings text-[14px]" aria-hidden="true"></i>
+                                Reitoria
+                            </span>
+                        </div>
+                        <h3 class="text-[17px] lg:text-[18px] font-medium text-[#111827] leading-snug">
+                            III Encontro Anual da Comissão Própria de Avaliação
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <span class="text-[56px] lg:text-[64px] font-bold text-[#008443] leading-none tracking-tighter">04</span>
+                        <div class="flex flex-col text-[15px] lg:text-[16px] font-bold text-[#008443] leading-tight uppercase">
+                            <span>NOV</span>
+                            <span>2026</span>
+                        </div>
                     </div>
                 </a>
 
-                <a href="/eventos/9739/">
-                    <span>Em andamento</span>
-                    <span title="Campus"><span aria-hidden="true"></span> Pau dos Ferros</span>
-                    <h3>Oficina "Dando cores ao sol"</h3>
+
+                <!-- ================= LINHA 2: EM ANDAMENTO ================= -->
+
+                <!-- Card 5: Oficina "Dando cores ao sol" (Fundo F5FBF5) -->
+                <a href="#" class="bg-[#F5FBF5] rounded-2xl border-[1.5px] border-[#71D62C] p-6 lg:p-7 flex flex-col justify-between aspect-square hover:bg-white transition-all">
                     <div>
-                        <span>14</span>
-                        <span>set</span>
-                        <span>2026</span>
+                        <div class="flex flex-col items-start gap-3 mb-4">
+                            <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#29A312]">
+                                <i class="ph ph-circle text-[16px]" aria-hidden="true"></i>
+                                Em andamento
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-[12px] font-medium text-[#5A5A5A] border border-[#D1D5DB] rounded-full px-3 py-1 bg-transparent">
+                                <i class="ph ph-buildings text-[14px]" aria-hidden="true"></i>
+                                Pau dos Ferros
+                            </span>
+                        </div>
+                        <h3 class="text-[17px] lg:text-[18px] font-medium text-[#111827] leading-snug">
+                            Oficina "Dando cores ao sol"
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <span class="text-[56px] lg:text-[64px] font-bold text-[#29A312] leading-none tracking-tighter">14</span>
+                        <div class="flex flex-col text-[15px] lg:text-[16px] font-bold text-[#29A312] leading-tight uppercase">
+                            <span>SET</span>
+                            <span>2026</span>
+                        </div>
                     </div>
                 </a>
 
-                <a href="/eventos/9764/">
-                    <span>Em andamento</span>
-                    <span title="Campus"><span aria-hidden="true"></span> São Gonçalo do Amarante</span>
-                    <h3>IFJURIS: Introdução ao Direito Constitucional</h3>
+                <!-- Card 6: IFJURIS -->
+                <a href="#" class="bg-[#F5FBF5] rounded-2xl border-[1.5px] border-[#71D62C] p-6 lg:p-7 flex flex-col justify-between aspect-square hover:bg-white transition-all">
                     <div>
-                        <span>14</span>
-                        <span>set</span>
-                        <span>2026</span>
+                        <div class="flex flex-col items-start gap-3 mb-4">
+                            <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#29A312]">
+                                <i class="ph ph-circle text-[16px]" aria-hidden="true"></i>
+                                Em andamento
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-[12px] font-medium text-[#5A5A5A] border border-[#D1D5DB] rounded-full px-3 py-1 bg-transparent">
+                                <i class="ph ph-buildings text-[14px]" aria-hidden="true"></i>
+                                São Gonçalo do Amarante
+                            </span>
+                        </div>
+                        <h3 class="text-[17px] lg:text-[18px] font-medium text-[#111827] leading-snug">
+                            IFJURIS: Introdução ao Direito Constitucional
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <span class="text-[56px] lg:text-[64px] font-bold text-[#29A312] leading-none tracking-tighter">14</span>
+                        <div class="flex flex-col text-[15px] lg:text-[16px] font-bold text-[#29A312] leading-tight uppercase">
+                            <span>SET</span>
+                            <span>2026</span>
+                        </div>
                     </div>
                 </a>
 
-                <a href="/eventos/9714/">
-                    <span>Em andamento</span>
-                    <span title="Campus"><span aria-hidden="true"></span> Reitoria</span>
-                    <h3>ASTEEAD Conecta: gestão, monitoramento e apoio à EaD no IFRN</h3>
+                <!-- Card 7: ASTEEAD Conecta -->
+                <a href="#" class="bg-[#F5FBF5] rounded-2xl border-[1.5px] border-[#71D62C] p-6 lg:p-7 flex flex-col justify-between aspect-square hover:bg-white transition-all">
                     <div>
-                        <span>14</span>
-                        <span>set</span>
-                        <span>2026</span>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#29A312]">
+                                <i class="ph ph-circle text-[16px]" aria-hidden="true"></i>
+                                Em andamento
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-[12px] font-medium text-[#5A5A5A] border border-[#D1D5DB] rounded-full px-3 py-1 bg-transparent">
+                                <i class="ph ph-buildings text-[14px]" aria-hidden="true"></i>
+                                Reitoria
+                            </span>
+                        </div>
+                        <h3 class="text-[17px] lg:text-[18px] font-medium text-[#111827] leading-snug">
+                            ASTEEAD Conecta: gestão, monitoramento e apoio à EaD no IFRN
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <span class="text-[56px] lg:text-[64px] font-bold text-[#29A312] leading-none tracking-tighter">14</span>
+                        <div class="flex flex-col text-[15px] lg:text-[16px] font-bold text-[#29A312] leading-tight uppercase">
+                            <span>SET</span>
+                            <span>2026</span>
+                        </div>
                     </div>
                 </a>
 
-                <a href="/eventos/9711/">
-                    <span>Em andamento</span>
-                    <span title="Campus"><span aria-hidden="true"></span> Currais Novos</span>
-                    <h3>Produção e exposição de Sala Temática: Abelha e Mel.</h3>
+                <!-- Card 8: Produção e exposição de Sala Temática -->
+                <a href="#" class="bg-[#F5FBF5] rounded-2xl border-[1.5px] border-[#71D62C] p-6 lg:p-7 flex flex-col justify-between aspect-square hover:bg-white transition-all">
                     <div>
-                        <span>14</span>
-                        <span>set</span>
-                        <span>2026</span>
+                        <div class="flex flex-col items-start gap-3 mb-4">
+                            <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#29A312]">
+                                <i class="ph ph-circle text-[16px]" aria-hidden="true"></i>
+                                Em andamento
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-[12px] font-medium text-[#5A5A5A] border border-[#D1D5DB] rounded-full px-3 py-1 bg-transparent">
+                                <i class="ph ph-buildings text-[14px]" aria-hidden="true"></i>
+                                Currais Novos
+                            </span>
+                        </div>
+                        <h3 class="text-[17px] lg:text-[18px] font-medium text-[#111827] leading-snug">
+                            Produção e exposição de Sala Temática: Abelha e Mel.
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <span class="text-[56px] lg:text-[64px] font-bold text-[#29A312] leading-none tracking-tighter">14</span>
+                        <div class="flex flex-col text-[15px] lg:text-[16px] font-bold text-[#29A312] leading-tight uppercase">
+                            <span>SET</span>
+                            <span>2026</span>
+                        </div>
                     </div>
                 </a>
 

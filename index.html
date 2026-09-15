@@ -2,74 +2,126 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{seu nome aqui} - UX e Dev Front-end</title>
-    <!-- CSS compilado do SCSS | colocar o link correto, pois este vai dar erro, viu-->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Usando a fonte de icones aqui-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 10 – Seção de Eventos</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@latest/src/css/phosphor.css" />
 </head>
 
 <body>
 
-    <header role="banner">
-        <nav role="navigation" aria-label="Navegação principal">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main role="main">
-        <section id="sobre" aria-labelledby="titulo-card">
-            <div class="card">
-
-                <!-- Avatar (placeholder) -->
-                <div class="card__avatar">
-                    <img src="https://via.placeholder.com/120x120/2c3e50/ffffff?text=Bruno"
-                        alt="Avatar de Bruno Nakamura, UX e Dev Front-end">
-                </div>
-
-                <!-- Informações -->
-                <div class="card__content">
-                    <h1 id="titulo-card">Bruno Nakamura</h1>
-                    <p class="card__subtitle">UX e Dev Front-end</p>
-
-                    <p class="card__description">
-                        Sou um híbrido raro: Design Systems + Engenharia de Produto.
-                        Entrego de ponta a ponta – da descoberta à produção – com métricas
-                        de negócio na cabeceira e DX/UX no detalhe.<br>
-                        Tradução simultânea entre PMs, Design, Front, Back e Data.
-                        Sem teatrinho: shippo, meço, repito.
-                    </p>
-
-                    <!-- Botão com ícone -->
-                    <a href="#" class="card__button" aria-label="Vamos trabalhar juntos">
-                        Vamos trabalhar juntos <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                </div>
-
-                <!-- Tecnologias (mockup de ícones) -->
-                <div class="card__tech" id="tecnologias">
-                    <h2 class="card__tech-title">Tecnologias que domino</h2>
-                    <ul class="card__tech-list">
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> ClickUp</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Dropbox</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> PAYCHEX</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> elastic</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> stripe</li>
-                    </ul>
+    <!-- ===========  Eventos  ================= -->
+    <section>
+        <div>
+            <!-- Cabeçalho da seção -->
+            <div>
+                <h2>Eventos</h2>
+                <a href="/eventos/">
+                    Todos os eventos
+                    <span aria-hidden="true"></span>
+                </a>
+                <div>
+                    <p>Conheça todos os eventos - atividades, festivais, congressos, palestras e outros - que englobam
+                        os <i>campi</i> do IFRN em diferentes escalas de alcance social.</p>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <footer role="contentinfo">
-        <p>&copy; 2026 Bruno Nakamura - Exemplo didático para alunos de webdesign</p>
-    </footer>
+            <!-- Grade de cards de eventos -->
+            <div>
+
+                <a href="/eventos/9486/">
+                    <span>Em breve</span>
+                    <span title="Campus"><span aria-hidden="true"></span> Pau dos Ferros</span>
+                    <h3>Vivências em Arte</h3>
+                    <div>
+                        <span>07</span>
+                        <span>dez</span>
+                        <span>2026</span>
+                    </div>
+                </a>
+
+                <a href="/eventos/9595/">
+                    <span>Em breve</span>
+                    <span title="Campus"><span aria-hidden="true"></span> Caicó</span>
+                    <h3>III Feira Seridó Ciência</h3>
+                    <div>
+                        <span>25</span>
+                        <span>nov</span>
+                        <span>2026</span>
+                    </div>
+                </a>
+
+                <a href="/eventos/9783/">
+                    <span>Em breve</span>
+                    <span title="Campus"><span aria-hidden="true"></span> João Câmara</span>
+                    <h3>CPOP 2026 - Competição de Pontes de Palito de Picolé do IFRN João Câmara</h3>
+                    <div>
+                        <span>04</span>
+                        <span>nov</span>
+                        <span>2026</span>
+                    </div>
+                </a>
+
+                <a href="/eventos/9333/">
+                    <span>Em breve</span>
+                    <span title="Campus"><span aria-hidden="true"></span> Reitoria</span>
+                    <h3>III Encontro Anual da Comissão Própria de Avaliação</h3>
+                    <div>
+                        <span>04</span>
+                        <span>nov</span>
+                        <span>2026</span>
+                    </div>
+                </a>
+
+                <a href="/eventos/9739/">
+                    <span>Em andamento</span>
+                    <span title="Campus"><span aria-hidden="true"></span> Pau dos Ferros</span>
+                    <h3>Oficina "Dando cores ao sol"</h3>
+                    <div>
+                        <span>14</span>
+                        <span>set</span>
+                        <span>2026</span>
+                    </div>
+                </a>
+
+                <a href="/eventos/9764/">
+                    <span>Em andamento</span>
+                    <span title="Campus"><span aria-hidden="true"></span> São Gonçalo do Amarante</span>
+                    <h3>IFJURIS: Introdução ao Direito Constitucional</h3>
+                    <div>
+                        <span>14</span>
+                        <span>set</span>
+                        <span>2026</span>
+                    </div>
+                </a>
+
+                <a href="/eventos/9714/">
+                    <span>Em andamento</span>
+                    <span title="Campus"><span aria-hidden="true"></span> Reitoria</span>
+                    <h3>ASTEEAD Conecta: gestão, monitoramento e apoio à EaD no IFRN</h3>
+                    <div>
+                        <span>14</span>
+                        <span>set</span>
+                        <span>2026</span>
+                    </div>
+                </a>
+
+                <a href="/eventos/9711/">
+                    <span>Em andamento</span>
+                    <span title="Campus"><span aria-hidden="true"></span> Currais Novos</span>
+                    <h3>Produção e exposição de Sala Temática: Abelha e Mel.</h3>
+                    <div>
+                        <span>14</span>
+                        <span>set</span>
+                        <span>2026</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>

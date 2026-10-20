@@ -78,57 +78,59 @@
         // ==========================================
         // TODO 1 — appendDigit(digit)
         // Digita um dígito no visor.
-        //
-        // Regras:
-        //  1. Se this.waitingForSecond for true:
-        //        this.display = digit
-        //        this.waitingForSecond = false
-        //  2. Senão, se this.display === '0':
-        //        this.display = digit
-        //  3. Senão:
-        //        this.display = this.display + digit
         // ==========================================
         appendDigit(digit) {
-          // ... seu código aqui
+          if (this.waitingForSecond) {
+            this.display = digit;
+            this.waitingForSecond = false;
+          } else if (this.display === '0') {
+            this.display = digit;
+          } else {
+            this.display = this.display + digit;
+          }
         },
 
         // ==========================================
         // TODO 2 — setOperator(op)
         // Registra o operador pendente.
-        //
-        // Regras:
-        //  1. Se this.display === 'Erro': return (saia)
-        //  2. Se this.operator !== null E !this.waitingForSecond:
-        //        this.calculate()
-        //  3. this.firstOperand = parseFloat(this.display)
-        //  4. this.operator = op
-        //  5. this.waitingForSecond = true
         // ==========================================
         setOperator(op) {
-          // ... seu código aqui
+          if (this.display === 'Erro') return;
+
+          if (this.operator !== null && !this.waitingForSecond) {
+            this.calculate();
+          }
+
+          this.firstOperand = parseFloat(this.display);
+          this.operator = op;
+          this.waitingForSecond = true;
         },
 
         // ==========================================
         // TODO 3 — calculate()
         // Executa a operação pendente.
-        //
-        // Regras:
-        //  1. Se this.operator === null OU this.firstOperand === null:
-        //        return
-        //  2. const a = this.firstOperand
-        //  3. const b = parseFloat(this.display)
-        //  4. Aplique o operador (use if/else ou switch):
-        //        '+' → a + b
-        //        '-' → a - b
-        //        '*' → a * b
-        //        '/' → b === 0 ? 'Erro' : a / b
-        //  5. this.display = String(resultado)
-        //  6. this.firstOperand = null
-        //  7. this.operator = null
-        //  8. this.waitingForSecond = true
         // ==========================================
         calculate() {
-          // ... seu código aqui
+          if (this.operator === null || this.firstOperand === null) return;
+
+          const a = this.firstOperand;
+          const b = parseFloat(this.display);
+          let resultado;
+
+          if (this.operator === '+') {
+            resultado = a + b;
+          } else if (this.operator === '-') {
+            resultado = a - b;
+          } else if (this.operator === '*') {
+            resultado = a * b;
+          } else if (this.operator === '/') {
+            resultado = b === 0 ? 'Erro' : a / b;
+          }
+
+          this.display = String(resultado);
+          this.firstOperand = null;
+          this.operator = null;
+          this.waitingForSecond = true;
         }
 
       }
